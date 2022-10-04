@@ -27,12 +27,13 @@ export const Polution2 = () => {
         })}
       </ul>
 
-      {/* {!contami
-          ? "Cargando..."
-          : contami.map((item) => {
-              return <li key={item.country}>{item.data.city}-{item.data.current.pollution.aqius}</li>;
-            })
-        } */}
     </>
   );
 };
+
+{/* {!contami
+    ? "Cargando..."
+    : contami.map((item) => {
+        return <li key={item.country}>{item.data.city}-{item.data.current.pollution.aqius}</li>;
+      })
+  } */}
