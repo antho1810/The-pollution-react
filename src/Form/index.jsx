@@ -9,7 +9,7 @@ export const Polution = () => {
 
   return (
     <div>
-      <p> Url: http://api.airvisual.com/v2/stations?city={watch('city')}&state={watch('state')}&country={watch('country')}&key={Api}</p>
+      <p> Url: http://api.airvisual.com/v2/city?city={watch('city')}&state={watch('state')}&country={watch('country')}&key={Api}</p>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label htmlFor="country">Pais</label>
         <input type="text" placeholder="Country" {...register('country', {required: true}) }/>
