@@ -13,19 +13,17 @@ export const Formulary = () => {
         {/* <label>Pais</label> */}
         <input
           {...search("country")}
-          name="country"
           placeholder="Country"
           type="text"
         />
         {/* <label>Estado</label> */}
         <input
           {...search("state")}
-          name="state"
           placeholder="State"
           type="text"
         />
         {/* <label>Ciudad</label> */}
-        <input {...search("city")} name="city" placeholder="City" type="text" />
+        <input {...search("city")} placeholder="City" type="text" />
         {/* <State /> */}
         <button type="submit" value="Buscar" />
       </form>
