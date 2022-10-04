@@ -1,6 +1,7 @@
 import "./App.css";
-import { Formulary } from "./Form";
+
 import { Mapa } from "./components/Map";
+import { Polution } from "./Form";
 
 function App() {
   return (
@@ -8,7 +9,8 @@ function App() {
       <header className="App-header">
         <Mapa />
       </header>
-      <Formulary />
+        <Polution />
+      
     </div>
   );
 }

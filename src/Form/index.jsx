@@ -1,48 +1,26 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-// import { State } from "../components/State";
+export const Polution = () => {
+  const { register, formState:{ errors}, watch, handleSubmit } = useForm();
+  const onSubmit = (data) =>{console.log(data)}
 
-export const Formulary = () => {
-  const [search, handleSubmit] = useForm();
-  const onSubmit = (poluInfo) => console.log(poluInfo);
+ const Api = 'a49953c6-48e6-4840-89b9-525f4bc319ea'
 
   return (
     <div>
+      <p> Url: http://api.airvisual.com/v2/stations?city={watch('city')}&state={watch('state')}&country={watch('country')}&key={Api}</p>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <label htmlFor="Country">País</label>
-        <input
-          name="Country"
-          placeholder="Country"
-          type="text"
-          {...search("country")}
-        />
-        <label htmlFor="State">Estado</label>
-        <input
-          name="State"
-          placeholder="State"
-          type="text"
-          {...search("state")}
-        />
-        <label htmlFor="City">Ciudad</label>
-        <input name="City" placeholder="City" type="text" {...search("city")} />
-        {/* <State /> */}
-        <button type="submit">Buscar</button>
-        <p id="btn"></p>
+        <label htmlFor="country">Pais</label>
+        <input type="text" placeholder="Country" {...register('country', {required: true}) }/>
+        {errors.country?.type === 'required' && <p>El campo pais es requerido</p>}
+        <label htmlFor="state">Departamento</label>
+        <input type="text" placeholder="State" {...register('state')} />
+        <label htmlFor="city">Ciudad</label>
+        <input type="text" placeholder="City" {...register('city')}/>
+
+        <input type="submit" value="Buscar" />
       </form>
     </div>
   );
 };
-// onClick={buscarApi()}
-// function buscarApi() {
-//   const apiKey = "375e5d9d-7942-4750-9ae0-67388f61f5a0";
-//   const url = `http://api.airvisual.com/v2/countries?key=${apiKey}`;
-//   console.log(url);
-// document.getElementById("btn").innerHTML = url
-//   // const fetApi = async () => {
-//   //   const response = await fetch(url);
-//   //   console.log(response.statusText);
-//     // const responseJSON = response.json();
-//     // setStat(responseJSON);
-//   // };
-// }
