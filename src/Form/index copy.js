@@ -6,13 +6,13 @@ export const Polution2 = () => {
   const url = `http://api.airvisual.com/v2/city?city=Medellin&state=Antioquia&country=Colombia&key=${Api}`;
   const getData = async () => {
     const data = await fetch(url);
-    const polution = await data.json();
-    setContami(polution);
+    const contami = await data.json();
+    setContami(contami);
   };
 
-  useEffect(() => {
-    getData();
-  }, []);
+  // useEffect(() => {
+  //   getData();
+  // }, []);
 
   return (
     <>
@@ -31,9 +31,9 @@ export const Polution2 = () => {
   );
 };
 
-{/* {!contami
-    ? "Cargando..."
-    : contami.map((item) => {
-        return <li key={item.country}>{item.data.city}-{item.data.current.pollution.aqius}</li>;
-      })
-  } */}
+// {!contami
+//     ? "Cargando..."
+//     : contami.map((item) => {
+//         return <li key={item.country}>{item.data.city}-{item.data.current.pollution.aqius}</li>;
+//       })
+//   } 

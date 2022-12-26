@@ -12,9 +12,9 @@ function App() {
       </header>
       <h1>Original Polution</h1>
         <Polution />
-        <br />
+        {/* <br />
         <h1> Copy polution</h1>
-        <Polution2 />
+        <Polution2 /> */}
       
     </div>
   );
